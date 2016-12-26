@@ -1,14 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+// Fill out your copyright notice in the Description page of Project Settings.
+
 #include "BattleTank.h"
-#include "TankTracks.h"
+#include "TankTrack.h"
 
 
 
-void UTankTracks::SetThrottle(float Throttle)
+void UTankTrack::SetThrottle(float Throttle)
 {
 
-	//TODO Clamp throttle value
 	auto ForceApplied = GetForwardVector() * Throttle * TrackMaxDrivingForce;
 	auto ForceLocation = GetComponentLocation();
 	auto TankRoot = Cast<UPrimitiveComponent>(GetOwner()->GetRootComponent());
